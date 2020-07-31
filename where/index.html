@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+  <head>
+    <title>ashannon.us - where</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <style>
+      a { color: #0000ee; }
+      .legendbox { display: inline-block; height: 10px; width: 20px; border: 1px solid #000; }
+    </style>
+  </head>
+  <body>
+    <table cellpadding="10">
+      <tr>
+        <td valign="top">
+          <label for="Weather-links">Weather Links</label>
+          <ul id="weather-links">
+            <li><a href="http://www.weather.gov">weather.gov</a></li>
+            <li><a href="http://pcso77.net/">psco77.net</a></li>
+          </ul>
+        </td>
+        <td valign="top">
+          <span>Reports</span>
+          <ul>
+            <li><a href="http://hisz.rsoe.hu/alertmap/index2.php" target="_blank">Worldwide Alert Map</a> (<a href="http://hisz.rsoe.hu/alertmap/index2.php?area=usa">USA</a>)</li>
+            <li><a href="https://www.crimereports.com/home/#!/dashboard" target="_blank">Crime Reports</a></li>
+          </ul>
+        </td>
+        <td vlaign="top">
+          <span>Links</span>
+          <ul>
+            <li><a href="https://apod.nasa.gov/apod/astropix.html" target="_blank">Astronomy Picture of the Day</a></li>
+            <li><a href="javascript:void(0)" onclick="water();">Find Glacier Water</a></li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+
+    <br />
+
+    <div style="text-align:center">
+      <a href="https://radar.weather.gov/Conus/Loop/NatLoop.gif" target="_blank">
+        <img src="https://radar.weather.gov/Conus/Loop/NatLoop_Small.gif" width="900" height="423" />
+      </a>
+    </div>
+
+    <div style="text-align:center;">
+      <img src="https://s.w-x.co/staticmaps/acttemp_1280x720.jpg" />
+    </div>
+
+    <div style="text-align:center">
+      <img src="http://forecast.weather.gov/wwamap/png/US.png" /><br />
+      <img src="http://pcso77.net/ledgend.png" />
+    </div>
+
+    <div style="text-align:center;">
+      <img src="http://images.intellicast.com/WxImages/CustomGraphic/sfcmap.gif" width="1280" height="720" />
+    </div>
+
+    <div style="text-align:center;">
+      <img src="https://s.w-x.co/staticmaps/WEB_AM_Fronts_1280x720.jpg" />
+    </div>
+
+    <div style="text-align:center;">
+      <img src="https://s.w-x.co/staticmaps/WEB_48hour_rain_snow_1280x720.jpg" />
+    </div>
+
+    <div style="text-align:center;">
+      <a name="pollen"></a>
+      <a href="http://www.cnn.com/WEATHER/allergy/index.html" target="_blank">
+        <img src="http://i.cnn.net/cnn/.element/img/1.0/weather/accu/overall.png" />
+      </a>
+    </div>
+
+    <div style="text-align:center">
+      <!-- Red Flag Warnings and Watches -->
+      <a href="https://fsapps.nwcg.gov/" target="_blank">
+        <img src="https://fsapps.nwcg.gov/data/last12/fire_wx_map.png" />
+      </a><br />
+      <img src="https://fsapps.nwcg.gov/afm/data/last12/images/us_fwz_status_legend.png" />
+    </div>
+
+    <div style="text-align:center">
+      <!-- Current Large Fire Incidents -->
+      <a id="nfs-lf-fire-a" target="_blank">
+        <img id="nfs-lf-fire-img" />
+      </a>
+    </div>
+
+    <div style="text-align: center;">
+      <strong>Today's Flood Conditions -- USGS WaterWatch</strong><br />
+      <a href="https://waterwatch.usgs.gov/new/index.php?id=ww_flood" target="_blank">
+        <img src="https://waterwatch.usgs.gov/images/flood/us/floodb.gif" />
+      </a>
+      <br />
+      <div>
+	<span class="legendbox" style="background-color:#231F20"></span> River Above Flood Stage |
+	<span class="legendbox" style="background-color:#0000FF"></span> 99th Percentile |
+	<span class="legendbox" style="background-color:#37A49A"></span> 95-98 Percentile
+      </div>
+
+      <!--
+      <ul style="list-style-type:none; text-align: left;">
+	<li style="border: 1px solid black;"><div class="legendbox" style="background-color:#231F20"></div> River Above Flood Stage</li>
+	<li><div class="legendbox" style="background-color:#0000FF"></div> 99th Percentile</li>
+	<li><div class="legendbox" style="background-color:#37A49A"></div> 95-98 Percentile</li>
+      </ul>
+      -->
+    </div>
+
+    <script src="index-script.js"></script>
+    <script>
+      function water() {
+        var where = prompt("Where to look for Glacier");
+        window.location = "http://locator.glacierwater.com/locator/viewer/map.php?lat=&lng=&accuracy=&search=" + encodeURIComponent(where) + "&value=5"
+      }
+    </script>
+  </body>
+</html>

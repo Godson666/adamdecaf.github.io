@@ -1,0 +1,77 @@
+/* css */
+
+/* general overrides */
+a:link { color: #000000; }
+a:visited { color: #000000; }
+a:hover { color: #000000; }
+a:active { color: #000000; }
+
+body {
+    background-color: #FFFFFA;
+    font-family: helvetica;
+}
+
+ul {
+    line-height: 150%;
+}
+
+/* common classes */
+.black, a.black {
+    color: #000;
+}
+
+.center {
+    text-align: center;
+}
+
+
+.bold {
+    font-weight: bold;
+}
+
+.right {
+    float: right;
+}
+
+/* base elements */
+
+nav {
+    border-bottom: 1px solid #000;
+}
+
+section {
+    margin-left: 10%;
+    width: 80%;
+}
+
+section article {
+    border-bottom: 1px dashed #000;
+    margin-bottom: 25px;
+}
+
+section article.camping-block {
+    border-bottom: 0px;
+    margin-bottom: 25px;
+    background-color: #bdcadb;
+    border-radius: 5px;
+    padding: 0px 10px 5px 10px;
+}
+
+section article h3 {
+    font-weight: bold;
+}
+
+section article label {
+    font-weight: bold;
+}
+
+table.camping {
+    border: 1px solid black;
+    padding: 3px;
+    width: 98%;
+}
+
+table tr.table-header {
+    font-weight: bold;
+    text-align: center;
+}
